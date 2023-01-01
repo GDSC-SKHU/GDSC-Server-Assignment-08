@@ -1,7 +1,9 @@
-# 22-23 Assignment template
+# 22-23 Server Assignment 8
 
-## 사용하는 방법
+스프링 부트를 활용한 JWT 인증 과제
 
-1. 레포를 생성할 때 해당 템플릿을 선택합니다.
-2. `.github/CODEOWNER`에 해당 파트 Core 멤버를 추가합니다.
-3. [`Auto assign`](https://github.com/apps/auto-assign) 앱을 등록합니다.
+## 주의할 점
+
+1. fork 후 기본 파일들을 건들면 안되용
+2. 프로젝트명을 꼭 자기이름으로(ex - 한현수)로 해주세요.
+3. PR 보낼 때 설명과 레퍼런스 출처를 적어주세요.
