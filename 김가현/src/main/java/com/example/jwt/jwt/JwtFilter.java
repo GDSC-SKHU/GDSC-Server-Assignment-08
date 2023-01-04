@@ -18,14 +18,14 @@ import java.io.IOException;
 public class JwtFilter extends GenericFilterBean {
 
     private final TokenProvider tokenProvider;
-//모든 토큰은 스트링 형태이다
+//+)모든 토큰은 스트링 형태이다
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         String token = resolveToken((HttpServletRequest) request);
         if(StringUtils.hasText(token) && tokenProvider.validateToken(token)) {
             Authentication authentication = tokenProvider.getAuthentication(token);
             SecurityContextHolder.getContext().setAuthentication(authentication);
-        }  //유효한 올바른 토큰임을 인지 하고 권한?인증정보?를 넘겨줌
+        }  //유효한 올바른 토큰임을 인지 하고 권한,인증정보를 넘겨줌
         chain.doFilter(request, response); //필터링을 하라
     }
 
